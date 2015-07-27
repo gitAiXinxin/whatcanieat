@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.footer{
+  background:rgb(248, 248, 248);
+  text-align:center;
+  color:#777;
+  font-size:18px;
+  padding:8px 0;
+  margin-top:30px;
+  border-top:1px solid #e7e7e7;
+  height: 42px;
+}
+
+.push {
+  height: 42px;
+}
+
+.wrap-all {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -72px; /* the bottom margin is the negative value of the footer's height */
+}

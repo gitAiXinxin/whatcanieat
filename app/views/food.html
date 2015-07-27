@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <h1>what can i eat</h1>
+    <input type="text" class="search-food" placeholder="搜一下呗" ng-model="keyword"/>
+    <ul>
+        <li ng-repeat="food in foods | filter: keyword" ng-click="preview(food)">
+            <img class="food-img" ng-src="/{{food.img}}" alt="{{food.name}}"/>
+            <p class="food-name">{{food.name}}</p>
+        </li>
+    </ul>
+    <div class="placeHolder"></div>
+</div>
+<div class="bottom">authored by <span>@john约汉</span></div>
+<div class="mask-bg" ng-if="dialogShow"></div>
+<div class="mask-dialog" ng-if="dialogShow">
+    <div class="dialog-top">
+        <a href="javascript:void(0)" class="cancel" ng-click="closePreivew()">关闭</a>
+    </div>
+    <img class="dialog-img" ng-src="{{currentFood.img}}" alt="currentFood.name"/>
+    <p class="dialog-name">{{currentFood.name}}</p>
+    <div class="dialog-data">
+        <dl>
+            <dt>热量</dt>
+            <dd>312kcal</dd>
+        </dl>
+        <dl>
+            <dt>蛋白质</dt>
+            <dd>20g</dd>
+        </dl>
+        <dl>
+            <dt>脂肪</dt>
+            <dd>12g</dd>
+        </dl>
+    </div>
+    <p class="info">{{cureentFood.info}}</p>
+    <a href="javascript:void(0)" class="dialog-plus" ng-click="plus(currentFood)">
+        添加进入我的餐盒
+    </a>
+</div>

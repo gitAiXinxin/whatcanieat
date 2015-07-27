@@ -1,0 +1,66 @@
+<% include header.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <form class="form-horizontal" action="/food/addFood" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="img" class="col-sm-2 control-label">上传图片</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="img" placeholder="img" name="img" multiple="multiple" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">食物名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="name" name="name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="info" class="col-sm-2 control-label">食物描述</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="info" placeholder="info" name="info" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="protein" class="col-sm-2 control-label">蛋白质</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="protein" placeholder="protein" name="protein" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fat" class="col-sm-2 control-label">脂肪</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="fat" placeholder="fat" name="fat" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="energy" class="col-sm-2 control-label">热量</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="energy" placeholder="energy" name="energy" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="carbo" class="col-sm-2 control-label">碳水化合物</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="carbo" placeholder="carbo" name="carbo" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<% include footer.ejs %>  

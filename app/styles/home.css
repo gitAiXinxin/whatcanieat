@@ -1,0 +1,150 @@
+html,body,ul,li,img,p,h1,dl,dt,dd,a{
+    margin:0;
+    padding:0;
+    color:#319382;
+}
+
+a{
+    text-decoration: none;
+}
+
+/** 固定页脚的写法**/
+html,body,.ngWrapper{
+    height:100%;
+}
+
+input{
+    width:70%;
+}
+
+.wrapper{
+    min-height:100%;
+    height:auto !important;
+    height:100%;
+    margin:0 auto -48px;
+}
+
+.bottom,.placeHolder{
+    height:16px;
+    color:#000;
+    text-align:center;
+    padding:16px 0;
+}
+.bottom span{
+    color:#319382;
+}
+
+/** 固定页脚结束 **/
+
+h1{
+    text-align: center;
+    padding:21.4px 0;
+}
+.search-food{
+    text-align: center;
+    display: block;
+    margin:0 auto;
+    padding: 10px;
+}
+ul{
+    list-style: none;
+    margin:30px auto;
+    width:90%;
+}
+li{
+    display: inline-block;
+    width:32%;
+}
+.food-img{
+    width:50px;
+    height:50px;
+    border-radius: 50px;
+    text-align: center;
+    margin:0 auto;
+    display: block;
+}
+.food-name{
+    margin:10px auto;
+    text-align: center;
+}
+
+
+/** 遮罩层**/
+.mask-bg{
+    position:fixed;
+    left:0;
+    top:0;
+    background:#000;
+    opacity: 0.4;
+    width:100%;
+    height:100%;
+    z-index:99;
+}
+
+
+.mask-dialog{
+    position: fixed;
+    z-index:100;
+    background:#fff;
+    width:478px;
+    padding:17px;
+    left:50%;
+    top:50%;
+    margin-left:-256px;
+    margin-top:-200px;
+    text-align:center;
+    overflow: hidden;
+    border-radius:5px;
+}
+
+.mask-dialog .dialog-top{
+    width:96%;
+    margin:0 auto;
+    text-align: right;
+    display: block;
+}
+
+.mask-dialog .dialog-name{
+    margin-top:21.4px;
+}
+
+.mask-dialog .dialog-img{
+    width:100px;
+    height:100px;
+    border-radius: 100px;
+    border:1px solid #eee;
+    position: relative;
+    margin:0 auto;
+}
+
+.mask-dialog .dialog-data{
+    margin:21.4px auto;
+}
+
+.mask-dialog dl{
+    display: inline-block;
+    width:32%;
+}
+.mask-dialog dt{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.mask-dialog .dialog-plus{
+    background:rgb(222,69,0);
+    display: block;
+    color:rgb(232,232,227);
+    padding:10px;
+}
+
+
+@media all and (max-width:540px){
+    .mask-dialog{
+        width:auto;
+        margin-left:0;
+        margin-right:0;
+        left:15px;
+        right:15px;
+    }
+}

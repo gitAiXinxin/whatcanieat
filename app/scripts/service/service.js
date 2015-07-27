@@ -13,6 +13,12 @@ app.service('FoodService',function($http){
                 }
 
             });
+        },
+
+        // 增加食物点击数
+        plusClick:function(id){
+            console.log("请求",id);
+            $http.get("http://127.0.0.1:9300/food/plus/"+id).success(function(res){});
         }
     };
 

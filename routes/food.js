@@ -22,6 +22,23 @@ router.get('/', function(req, res, next){
   });
 });
 
+router.get('/plus/:id',function(req,res,next){
+
+    var id = req.params.id;
+    Food.find({_id:id},function(err,foods){
+        if(!err){
+            var pv = foods[0].pv;
+            console.log("查询到的food",foods);
+            console.log("查询到的id",id,"pv是",pv);
+            pv++;
+            Food.update({_id:id},{$set:{pv:pv}},function(err,docs){
+                console.log("增加点击数报错",err);
+            });
+        }
+    });
+
+});
+
 
 /* 新增食物页面*/
 router.get('/addFood', function(req, res, next){

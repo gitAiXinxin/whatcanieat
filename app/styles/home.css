@@ -123,10 +123,10 @@ li{
 
 .mask-dialog dl{
     display: inline-block;
-    width:32%;
+    width:23%;
 }
 .mask-dialog dt{
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: bold;
     margin-bottom: 16px;
 }
@@ -138,6 +138,11 @@ li{
     padding:10px;
 }
 
+.mask-dialog .info{
+    padding-bottom: 21px;
+    color:#aaa;
+}
+
 
 @media all and (max-width:540px){
     .mask-dialog{
@@ -147,4 +152,20 @@ li{
         left:15px;
         right:15px;
     }
+}
+
+
+/*ng-repeat的元素*/
+.food-item,.mask-bg,.mask-dialog{
+    -webkit-transition: all ease-in 0.1s;
+    -o-transition: all ease-in 0.1s;
+    transition: all ease-in 0.1s;
+}
+/*动画开始前*/
+.food-item.ng-enter,.mask-dialog.ng-enter,.mask-bg.ng-enter{
+    opacity:0;
+}
+/*动画过程*/
+.food-item-ng-enter-active,.mask-dialog-ng-enter-active,.mask-bg-ng-enter-active{
+    opacity:1;
 }

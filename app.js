@@ -30,9 +30,9 @@ app.use(express.static(path.join(__dirname)));
 
 app.use('/food', food);
 
-app.use('/whatcanieat', function(req,res){
+app.use('/', function(req,res){
 	console.log("==========");
-	res.sendfile('app/index.html');
+	res.sendfile('app/index2.html');
 });
 
 

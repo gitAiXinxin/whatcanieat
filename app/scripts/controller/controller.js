@@ -14,8 +14,11 @@ app.controller('FoodCtrl', function($scope,FoodService) {
 
     // 展示食物弹层
     $scope.preview = function(food){
+        console.log("sss");
         $scope.currentFood = food;
         $scope.dialogShow = true;
+        console.log($scope.dialogShow);
+        FoodService.plusClick(food._id);
     };
 
     // 添加进餐盒

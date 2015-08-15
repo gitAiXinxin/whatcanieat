@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no')>
+
+    <title></title>
+    <style>
+        html,body{
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="out"></h1>
+
+<script>
+    var str = "";
+    var out = document.getElementById("out");
+    document.body.addEventListener("click",function(event){
+        str += " click ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("touchstart",function(){
+        str += " touchstart ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("touchmove",function(){
+        str += " touchmove ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("touchend",function(){
+        str += " touchend ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("mousedown",function(){
+        str += " mousedown ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("mouseover",function(){
+        str += " mouseover ";
+        out.innerText = str;
+    },false);
+    document.body.addEventListener("mouseenter",function(){
+        str += " mouseenter ";
+        out.innerText = str;
+    },false);
+
+
+    //http://segmentfault.com/q/1010000000691822
+</script>
+</body>
+</html>

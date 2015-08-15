@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="food">
+<html>
 <head lang="en" >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
     <title>今儿吃什么</title>
-    <script src="app/bower_components/angular/angular.min.js"></script>
-    <script src="app/bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="app/app.js"></script>
-    <script src="app/scripts/service/service.js"></script>
-    <script src="app/scripts/controller/controller.js"></script>
+    <script src="bower_components/riot/riot.js"></script>
     <link rel="stylesheet" href="app/styles/home.css"/>
     <script>
         var _hmt = _hmt || [];
@@ -20,48 +16,57 @@
         })();
     </script>
 </head>
-<body ng-controller="FoodCtrl">
-<div class="wrapper" >
+<body>
+<div class="wrapper">
     <h1>what can i eat</h1>
-    <input type="text" class="search-food" placeholder="搜一下呗" ng-model="keyword"/>
-    <ul>
-        <li class="item" ng-repeat="food in foods | filter: keyword" ng-click="preview(food)">
-            <img class="food-img" ng-src="/{{food.img}}" alt="{{food.name}}"/>
-            <p class="food-name">{{food.name}}</p>
-        </li>
-    </ul>
+    <input type="text" class="search-food" placeholder="搜一下呗"/>
+    <search-food>
+        <ul>
+            <!--<li class="item" each={food,i in foods}>-->
+                <!--<img class="food-img" src="/{food.img}" alt="{food.name}"/>-->
+                <!--<p class="food-name">{food.name}</p>-->
+            <!--</li>-->
+            <li each="{food in foods}">
+                {food.name}
+            </li>
+        </ul>
+
+        <script>
+            this.foods = [{name:1},{name:2}];
+        </script>
+    </search-food>
     <div class="placeHolder"></div>
 </div>
 <div class="bottom">authored by <span>@john约汉</span></div>
-<div class="mask-bg" ng-if="dialogShow"></div>
-<div class="mask-dialog" ng-if="dialogShow">
-    <div class="dialog-top">
-        <a href="javascript:void(0)" class="cancel" ng-click="closePreivew()">关闭</a>
-    </div>
-    <img class="dialog-img" ng-src="{{currentFood.img}}" alt="currentFood.name"/>
-    <p class="dialog-name">{{currentFood.name}}</p>
-    <div class="dialog-data">
-        <dl>
-            <dt>热量</dt>
-            <dd>{{currentFood.energy}}大卡</dd>
-        </dl>
-        <dl>
-            <dt>蛋白</dt>
-            <dd>{{currentFood.protein}}g</dd>
-        </dl>
-        <dl>
-            <dt>脂肪</dt>
-            <dd>{{currentFood.fat}}g</dd>
-        </dl>
-        <dl>
-            <dt>碳水</dt>
-            <dd>{{currentFood.carbo}}g</dd>
-        </dl>
-    </div>
-    <p class="info">“ {{currentFood.info}} ”</p>
-    <a href="javascript:void(0)" class="dialog-plus" ng-click="plus(currentFood)">
-        添加进入我的餐盒
-    </a>
-</div>
+<!--<div class="mask-bg" ng-if="dialogShow"></div>-->
+<!--<div class="mask-dialog" ng-if="dialogShow">-->
+    <!--<div class="dialog-top">-->
+        <!--<a href="javascript:void(0)" class="cancel" ng-click="closePreivew()">关闭</a>-->
+    <!--</div>-->
+    <!--<img class="dialog-img" ng-src="{{currentFood.img}}" alt="currentFood.name"/>-->
+    <!--<p class="dialog-name">{{currentFood.name}}</p>-->
+    <!--<div class="dialog-data">-->
+        <!--<dl>-->
+            <!--<dt>热量</dt>-->
+            <!--<dd>{{currentFood.energy}}大卡</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt>蛋白</dt>-->
+            <!--<dd>{{currentFood.protein}}g</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt>脂肪</dt>-->
+            <!--<dd>{{currentFood.fat}}g</dd>-->
+        <!--</dl>-->
+        <!--<dl>-->
+            <!--<dt>碳水</dt>-->
+            <!--<dd>{{currentFood.carbo}}g</dd>-->
+        <!--</dl>-->
+    <!--</div>-->
+    <!--<p class="info">“ {{currentFood.info}} ”</p>-->
+    <!--<a href="javascript:void(0)" class="dialog-plus" ng-click="plus(currentFood)">-->
+        <!--添加进入我的餐盒-->
+    <!--</a>-->
+<!--</div>-->
 </body>
 </html>

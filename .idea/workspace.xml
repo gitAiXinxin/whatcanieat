@@ -64,8 +64,8 @@
       <file leaf-file-name="clickthrough.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/clickthrough.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91573036">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.15730338">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="2" selection-end-line="42" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -665,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/clickthrough.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91573036">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.15730338">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="2" selection-end-line="42" selection-end-column="15" />
           <folding />
         </state>
       </provider>

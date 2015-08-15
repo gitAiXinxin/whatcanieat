@@ -2,8 +2,6 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no')>
-
     <title></title>
     <style>
         html,body{
@@ -19,6 +17,10 @@
 <script>
     var str = "";
     var out = document.getElementById("out");
+    document.body.addEventListener("tap",function(event){
+        str += " tap ";
+        out.innerText = str;
+    },false);
     document.body.addEventListener("click",function(event){
         str += " click ";
         out.innerText = str;

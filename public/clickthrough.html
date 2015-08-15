@@ -51,16 +51,15 @@
         str += " mouseenter ";
         out.innerText = str;
     },false);
-    document.getElementById("box").addEventListener("click",function(event){
-        str += " click ";
-        out.innerText = str;
-        alert("click!!!");
-    },false);
 
     document.getElementById("box").addEventListener("click",function(event){
         str += " click ";
         out.innerText = str;
-        alert("click!!!");
+    },false);
+
+    document.getElementById("box").addEventListener("tap",function(event){
+        str += " tap ";
+        out.innerText = str;
     },false);
 
     //http://segmentfault.com/q/1010000000691822

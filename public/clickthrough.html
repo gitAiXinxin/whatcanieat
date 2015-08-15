@@ -17,14 +17,6 @@
 <script>
     var str = "";
     var out = document.getElementById("out");
-    document.body.addEventListener("tap",function(event){
-        str += " tap ";
-        out.innerText = str;
-    },false);
-    document.body.addEventListener("click",function(event){
-        str += " click ";
-        out.innerText = str;
-    },false);
     document.body.addEventListener("touchstart",function(){
         str += " touchstart ";
         out.innerText = str;
@@ -48,8 +40,11 @@
     document.body.addEventListener("mouseenter",function(){
         str += " mouseenter ";
         out.innerText = str;
+    },false);   
+    document.body.addEventListener("click",function(event){
+        str += " click ";
+        out.innerText = str;
     },false);
-
 
     //http://segmentfault.com/q/1010000000691822
 </script>

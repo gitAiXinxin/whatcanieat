@@ -17,6 +17,7 @@ router.get('/', function(req, res, next){
     } else {
         resData.code = 1;
         resData.data = foods;
+        resData.total = foods.length;
         res.send(resData);
     }
   });
